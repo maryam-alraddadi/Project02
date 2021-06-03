@@ -1,2 +1,13 @@
 # Project02
-choose your idea to implement what you learned during React classes.
+<div dir="rtl">
+اختيار فكرة المشروع راجعة للطالب
+<br>
+<br>
+
+### يجب تطبيق على الأقل المتطلبات التالية:
+- تطبيق State
+- تطبيق دالتين على الأقل من دوال Lifecycle
+- تطبيق axios
+تطبيق state
+
+  </div>

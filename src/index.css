@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+
+  a {
+    @apply text-blue-400 font-normal tracking-wider hover:text-blue-600;
+  }
+
+  span {
+    @apply font-normal text-gray-500 tracking-wide;
+  }
+}

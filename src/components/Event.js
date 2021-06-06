@@ -39,7 +39,28 @@ const Event = ({ event }) => {
     }
   };
 
-  // TODO: get relative date
+  const getRelativeTime = (date) => {
+    var units = {
+      day: 24 * 60 * 60 * 1000,
+      hour: 60 * 60 * 1000,
+      minute: 60 * 1000,
+      second: 1000,
+    };
+
+    let now = new Date();
+    let eventDate = new Date(date);
+    let elapsed = eventDate - now;
+
+    var rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
+
+    for (var u in units)
+      if (Math.abs(elapsed) > units[u] || u === "second") {
+        if (Math.abs(Math.round(elapsed / units[u])) < 30)
+          return rtf.format(Math.round(elapsed / units[u]), u);
+        else return getEventDate(date);
+      }
+  };
+
   const getEventDate = (date) => {
     let d = new Date(date);
     return d.toLocaleString("default", { month: "short" }) + " " + d.getDate();
@@ -52,7 +73,7 @@ const Event = ({ event }) => {
           {getEvent(event.type)}{" "}
         </span>
         <span className="float-right align-middle leading-10 text-gray-400">
-          {getEventDate(event.created_at)}
+          {getRelativeTime(event.created_at)}
         </span>
       </div>
     </div>

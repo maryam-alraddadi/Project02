@@ -157,8 +157,8 @@ export const IssuesEvent = ({ event }) => {
       {getAction(event.payload.action) + " an "}
       <a href={event.payload.issue.html_url} target="_blank" rel="noreferrer">
         issue
-      </a>{" "}
-      in
+      </a>
+      {" in "}
       <a
         href={`https://github.com/${event.repo.name}`}
         target="_blank"

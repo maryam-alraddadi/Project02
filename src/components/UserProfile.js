@@ -7,8 +7,8 @@ import SearchField from "./SearchField";
 
 import octocatImg from "../icons/octocat.png";
 
-axios.defaults.headers.common["Authorization"] =
-  process.env.REACT_APP_OAUTH_TOKEN;
+// axios.defaults.headers.common["Authorization"] =
+//   process.env.REACT_APP_OAUTH_TOKEN;
 
 const BASE_URL = "https://api.github.com";
 
@@ -39,8 +39,6 @@ class UserProfile extends Component {
       })
       .catch((err) => console.log(err));
   };
-
-  // repo(name, url), event type,  date
 
   getEvents = (username) => {
     axios

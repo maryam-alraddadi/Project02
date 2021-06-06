@@ -21,3 +21,11 @@
   بعد الانتهاء من تنفيذ المشروع يرجى إضافة صورة من واجهة الصفحة في ملف README.md
 
   </div>
+
+
+#
+
+App to view github users activities using [Github Events API](https://docs.github.com/en/rest/reference/activity#events)
+
+
+![](./demo.gif)
